@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a5S-q1-anv">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Button Debounce-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DebouncedCTAViewController" customModule="Debouncing_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Aun-Xl-IK0">
+                                <rect key="frame" x="78" y="70" width="219" height="183"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Debouncing in Swift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ph-jM-zwG">
+                                        <rect key="frame" x="0.0" y="0.0" width="219" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Call to action" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="013-Wj-XPs">
+                                        <rect key="frame" x="50" y="44" width="119.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="debouncing" translatesAutoresizingMaskIntoConstraints="NO" id="JbT-Sl-eCn">
+                                        <rect key="frame" x="59.5" y="83" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="23q-pj-Agd"/>
+                                            <constraint firstAttribute="width" constant="100" id="dSE-5S-eHR"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="2Xb-5k-Vr5">
+                                <rect key="frame" x="127.5" y="408" width="120" height="110"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHe-KJ-kEj">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="40"/>
+                                        <color key="backgroundColor" red="0.18431372549019609" green="0.38823529411764707" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="3sk-FK-sJy"/>
+                                            <constraint firstAttribute="width" constant="120" id="FkY-pW-tUX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="Debounce">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didPressDebouncedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iNw-k4-p6Y"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXM-z5-b8L">
+                                        <rect key="frame" x="0.0" y="70" width="120" height="40"/>
+                                        <color key="backgroundColor" red="0.19607843137254902" green="0.41176470588235292" blue="0.54117647058823526" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="A19-dc-MIt"/>
+                                            <constraint firstAttribute="width" constant="120" id="YAT-M5-3bh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="Normal">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didPressNormalButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KVq-Xb-ECg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.30196078431372547" green="0.62352941176470589" blue="0.81960784313725488" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2Xb-5k-Vr5" secondAttribute="bottom" constant="100" id="5Du-eA-N5Q"/>
+                            <constraint firstItem="Aun-Xl-IK0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="6Yq-Hq-XpM"/>
+                            <constraint firstItem="Aun-Xl-IK0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="baB-3a-Erg"/>
+                            <constraint firstItem="2Xb-5k-Vr5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f27-as-P3I"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Button Debounce" image="Icon-Small" id="f0G-Zr-Q3q"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2143.1999999999998" y="554.57271364317842"/>
+        </scene>
+        <!--Table Scroll Debounce-->
+        <scene sceneID="7cc-Aj-tXn">
+            <objects>
+                <viewController id="j6x-XR-g7n" customClass="DebouncedTableViewController" customModule="Debouncing_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vgn-EI-Ym1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MOG-Wf-xxy">
+                                <rect key="frame" x="0.0" y="20" width="375" height="60"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="AG1-I9-f1O">
+                                        <rect key="frame" x="36.5" y="15.5" width="302.5" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Focus Debounce" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddA-kj-lxA">
+                                                <rect key="frame" x="0.0" y="0.0" width="183.5" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tZK-eE-COm">
+                                                <rect key="frame" x="203.5" y="0.0" width="51" height="30"/>
+                                            </switch>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="debouncing" translatesAutoresizingMaskIntoConstraints="NO" id="fPx-y1-LiD">
+                                                <rect key="frame" x="272.5" y="0.0" width="30" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="8KC-cb-uqt"/>
+                                                    <constraint firstAttribute="width" constant="30" id="Icv-40-pvT"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="AG1-I9-f1O" firstAttribute="centerX" secondItem="MOG-Wf-xxy" secondAttribute="centerX" id="9nn-Kf-J9K"/>
+                                    <constraint firstAttribute="height" constant="60" id="dcs-et-OHe"/>
+                                    <constraint firstItem="AG1-I9-f1O" firstAttribute="centerY" secondItem="MOG-Wf-xxy" secondAttribute="centerY" id="jlq-bI-FgA"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xHi-aj-o93">
+                                <rect key="frame" x="0.0" y="80" width="375" height="538"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="customCell" id="Gmy-HU-ibL">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gmy-HU-ibL" id="6ei-Ef-GfQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="j6x-XR-g7n" id="Sjj-72-LGG"/>
+                                    <outlet property="delegate" destination="j6x-XR-g7n" id="BsF-bR-fbl"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.38039215686274508" green="0.61960784313725492" blue="0.80392156862745101" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="MOG-Wf-xxy" firstAttribute="leading" secondItem="k33-t6-5NI" secondAttribute="leading" id="2H7-A6-W5a"/>
+                            <constraint firstItem="xHi-aj-o93" firstAttribute="bottom" secondItem="k33-t6-5NI" secondAttribute="bottom" id="9im-EO-ryv"/>
+                            <constraint firstItem="MOG-Wf-xxy" firstAttribute="trailing" secondItem="k33-t6-5NI" secondAttribute="trailing" id="SSS-L1-bFw"/>
+                            <constraint firstItem="xHi-aj-o93" firstAttribute="leading" secondItem="k33-t6-5NI" secondAttribute="leading" id="Xsu-D5-Klb"/>
+                            <constraint firstItem="xHi-aj-o93" firstAttribute="trailing" secondItem="k33-t6-5NI" secondAttribute="trailing" id="fdX-R1-YU9"/>
+                            <constraint firstItem="xHi-aj-o93" firstAttribute="top" secondItem="MOG-Wf-xxy" secondAttribute="bottom" id="iMh-Ep-MIu"/>
+                            <constraint firstItem="MOG-Wf-xxy" firstAttribute="top" secondItem="k33-t6-5NI" secondAttribute="top" id="xyu-dG-AWg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="k33-t6-5NI"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Table Scroll Debounce" image="Icon-Small" id="p67-n3-cvx"/>
+                    <connections>
+                        <outlet property="debounceSwitch" destination="tZK-eE-COm" id="qkd-mj-Q3Y"/>
+                        <outlet property="tableView" destination="xHi-aj-o93" id="iQ2-mP-943"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2ki-ut-1TB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2143.1999999999998" y="-376.46176911544228"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="fhk-Eq-Z7T">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="a5S-q1-anv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gdG-eu-Aqo">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="dqd-Me-wt0"/>
+                        <segue destination="j6x-XR-g7n" kind="relationship" relationship="viewControllers" id="W8o-Mw-HFb"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nye-Xj-YPb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1204" y="88.605697151424295"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Icon-Small" width="29" height="29"/>
+        <image name="debouncing" width="200" height="200"/>
+    </resources>
+</document>
